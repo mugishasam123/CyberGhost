@@ -24,8 +24,6 @@ public class SimpleClient {
                    
             String fromServer;
             String fromUser;
-          
-    
 
             while ((fromServer = in.readLine()) != null) {
                 System.out.println("Server: " + fromServer);
