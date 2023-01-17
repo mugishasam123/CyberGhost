@@ -1,9 +1,5 @@
-package main.java.com.samuel.protocol;
+package com.samuel.protocol;
 
-
-
-import java.net.*;
-import java.io.*;
 
 public class KnockKnockProtocol {
     private static final int WAITING = 0;

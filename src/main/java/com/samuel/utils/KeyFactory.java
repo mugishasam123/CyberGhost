@@ -1,19 +1,19 @@
-package main.java.com.samuel.utils;
+package com.samuel.utils;
 
 import java.io.*;
 import java.security.*;
-import javax.net.*;
-
-
+import javax.net.ssl.*;
 
 public class KeyFactory {
+
+    private static X509KeyManager x509KeyManager = null;
 
     public static X509KeyManager keyManage(String certUrl, String pass) {
 
         try {
 
             // KeyManagerFactory ()
-            
+
             KeyStore keyStore = KeyStore.getInstance("PKCS12");
             InputStream inputStream = ClassLoader.getSystemClassLoader()
                     .getResourceAsStream(certUrl);
@@ -30,11 +30,10 @@ public class KeyFactory {
             if (x509KeyManager == null)
                 throw new NullPointerException();
 
-            return x509KeyManager;
-
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return x509KeyManager;
 
     }
 
