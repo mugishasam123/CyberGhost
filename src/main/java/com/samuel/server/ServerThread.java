@@ -1,11 +1,11 @@
-package main.java.com.samuel.server;
+package com.samuel.server;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
-import main.java.com.samuel.protocol.KnockKnockProtocol;
+import com.samuel.protocol.KnockKnockProtocol;
 
 public class ServerThread extends Thread {
 
